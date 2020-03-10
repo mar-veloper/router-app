@@ -1,7 +1,6 @@
 import React from "react";
 
 const Posts = ({ match }) => {
-  console.log(match.params);
   return (
     <div>
       <h1>Posts</h1>

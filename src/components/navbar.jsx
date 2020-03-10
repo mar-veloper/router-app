@@ -2,6 +2,25 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
+  const date = new Date();
+  const currentYear = date.getFullYear();
+  const currentMonthIndex = date.getMonth();
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+  const currentMonth = monthNames[currentMonthIndex];
+
   return (
     <ul>
       <li>
@@ -11,7 +30,7 @@ const NavBar = () => {
         <Link to="/products">Products</Link>
       </li>
       <li>
-        <Link to="/posts/2018/06">Posts</Link>
+        <Link to={`/posts/${currentYear}/${currentMonth}`}>Posts</Link>
       </li>
       <li>
         <Link to="/admin">Admin</Link>
