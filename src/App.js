@@ -8,7 +8,6 @@ import ProductDetails from "./components/productDetails";
 import NotFound from "./components/notFound";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
-
 class App extends Component {
   render() {
     return (
